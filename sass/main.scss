@@ -1,8 +1,12 @@
 // @import "./vendors/css";
 // @import "./utils/css";
+@import "./utils/variables";
+@import "./utils/placeholders";
 // @import "./base/css";
 // @import "./layout/css";
 @import "./pages/home";
 @import "./pages/photographer";
 // @import "./components/css";
+@import "./components/button";
+@import "./components/img";
 // @import "./themes/css";
