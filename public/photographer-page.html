@@ -66,13 +66,31 @@
         <p>300€ / jour</p>
       </div>
       <!-- <p class="daily-rate">#insert like and rate</p> -->
-      <section>
-        <label for="choose">Trier par</label>
-        <select name="" id="choose">
-          <option value="1">Popularité</option>
-          <option value="2">Date</option>
-          <option value="3">Titre</option>
-        </select>
+      <section class="gallery-container">
+        <div>
+          <label for="choose">Trier par</label>
+          <!-- <select name="" id="choose">
+            <option value="1">Popularité</option>
+            <option value="2">Date</option>
+            <option value="3">Titre</option>
+          </select> -->
+          <!-- ---------------------TEST---------------- -->
+          <div class="select" tabindex="1">
+            <input
+              class="selectopt"
+              name="test"
+              type="radio"
+              id="opt1"
+              checked
+            />
+            <label for="opt1" class="option">Popularité</label>
+            <input class="selectopt" name="test" type="radio" id="opt2" />
+            <label for="opt2" class="option">Date</label>
+            <input class="selectopt" name="test" type="radio" id="opt3" />
+            <label for="opt3" class="option">Titre</label>
+          </div>
+          <!-- ---------------------TEST---------------- -->
+        </div>
         <div class="gallery">
           <div class="gallery__card">
             <a href="" class="gallery__card__img">
@@ -82,100 +100,11 @@
                 id="gallery__card__img"
               />
             </a>
-            <div>
-              <p>#Arc-en-cie</p>
+            <div class="gallery__card__about">
+              <p>Arc-en-cie</p>
               <div class="count-like">
-                <p>12</p>
-                <svg
-                  aria-hidden="true"
-                  focusable="false"
-                  data-icon="heart"
-                  role="img"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 512 512"
-                  class="like"
-                  aria-label="like"
-                >
-                  <path
-                    fill="currentColor"
-                    d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"
-                  ></path>
-                </svg>
-              </div>
-            </div>
-          </div>
-          <div class="gallery__card">
-            <a href="" class="gallery__card__img">
-              <img
-                src="img/photos/Mimi/Animals_Rainbow.jpg"
-                alt=""
-                id="gallery__card__img"
-              />
-            </a>
-            <div>
-              <p>#Arc-en-cie</p>
-              <div class="count-like">
-                <p>12</p>
-                <svg
-                  aria-hidden="true"
-                  focusable="false"
-                  data-icon="heart"
-                  role="img"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 512 512"
-                  class="like"
-                  aria-label="like"
-                >
-                  <path
-                    fill="currentColor"
-                    d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"
-                  ></path>
-                </svg>
-              </div>
-            </div>
-          </div>
-          <div class="gallery__card">
-            <a href="" class="gallery__card__img">
-              <img
-                src="img/photos/Mimi/Animals_Rainbow.jpg"
-                alt=""
-                id="gallery__card__img"
-              />
-            </a>
-            <div>
-              <p>#Arc-en-cie</p>
-              <div class="count-like">
-                <p>12</p>
-                <svg
-                  aria-hidden="true"
-                  focusable="false"
-                  data-icon="heart"
-                  role="img"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 512 512"
-                  class="like"
-                  aria-label="like"
-                >
-                  <path
-                    fill="currentColor"
-                    d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"
-                  ></path>
-                </svg>
-              </div>
-            </div>
-          </div>
-          <div class="gallery__card">
-            <a href="" class="gallery__card__img">
-              <img
-                src="img/photos/Mimi/Animals_Rainbow.jpg"
-                alt=""
-                id="gallery__card__img"
-              />
-            </a>
-            <div>
-              <p>#Arc-en-cie</p>
-              <div class="count-like">
-                <p>12</p>
+                <span>12</span>
+                <!-- <p>12</p> -->
                 <svg
                   aria-hidden="true"
                   focusable="false"
@@ -233,10 +162,104 @@
                 id="gallery__card__img"
               />
             </a>
-            <div>
-              <p>#Arc-en-cie</p>
+            <div class="gallery__card__about">
+              <p>Arc-en-cie</p>
               <div class="count-like">
-                <p>12</p>
+                <span>12</span>
+                <!-- <p>12</p> -->
+                <svg
+                  aria-hidden="true"
+                  focusable="false"
+                  data-icon="heart"
+                  role="img"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 512 512"
+                  class="like"
+                  aria-label="like"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"
+                  ></path>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="gallery__card">
+            <a href="" class="gallery__card__img">
+              <img
+                src="img/photos/Mimi/Animals_Rainbow.jpg"
+                alt=""
+                id="gallery__card__img"
+              />
+            </a>
+            <div class="gallery__card__about">
+              <p>Arc-en-cie</p>
+              <div class="count-like">
+                <span>12</span>
+                <!-- <p>12</p> -->
+                <svg
+                  aria-hidden="true"
+                  focusable="false"
+                  data-icon="heart"
+                  role="img"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 512 512"
+                  class="like"
+                  aria-label="like"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"
+                  ></path>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="gallery__card">
+            <a href="" class="gallery__card__img">
+              <img
+                src="img/photos/Mimi/Animals_Rainbow.jpg"
+                alt=""
+                id="gallery__card__img"
+              />
+            </a>
+            <div class="gallery__card__about">
+              <p>Arc-en-cie</p>
+              <div class="count-like">
+                <span>12</span>
+                <!-- <p>12</p> -->
+                <svg
+                  aria-hidden="true"
+                  focusable="false"
+                  data-icon="heart"
+                  role="img"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 512 512"
+                  class="like"
+                  aria-label="like"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"
+                  ></path>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="gallery__card">
+            <a href="" class="gallery__card__img">
+              <img
+                src="img/photos/Mimi/Animals_Rainbow.jpg"
+                alt=""
+                id="gallery__card__img"
+              />
+            </a>
+            <div class="gallery__card__about">
+              <p>Arc-en-cie</p>
+              <div class="count-like">
+                <span>12</span>
+                <!-- <p>12</p> -->
                 <svg
                   aria-hidden="true"
                   focusable="false"

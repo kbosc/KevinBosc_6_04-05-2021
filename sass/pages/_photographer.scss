@@ -40,15 +40,14 @@ header {
 .daily-rate {
   position: absolute;
   bottom: 0;
-  right: 2rem;
+  right: 1rem;
   display: flex;
   justify-content: space-around;
-  // background-color: $secondary-color;
   background-color: #db8876;
   color: black;
   border-radius: 5px 5px 0 0;
-  height: 3rem;
-  width: 14rem;
+  height: 4rem;
+  width: 22rem;
   & > * {
     @extend %flex-center;
   }
@@ -62,38 +61,38 @@ header {
 select {
   background-color: $primary-color;
   color: white;
+  @extend %radius;
 }
-
+.gallery-container {
+  margin-left: 4rem;
+  & > div {
+    display: flex;
+    align-items: baseline;
+    & > label {
+      margin-right: 1rem;
+    }
+  }
+}
 .gallery {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  margin-left: 4rem;
+  // margin-left: 4rem;
   margin-top: 3rem;
   &__card {
     margin-right: 4rem;
+    margin-bottom: 2rem;
     &__about {
       display: flex;
       justify-content: space-between;
       color: $primary-color;
+      padding-top: 0.5rem;
     }
   }
 }
-
-// .daily-rate {
-//   display: flex;
-//   justify-content: space-around;
-//   background-color: #db8876;
-//   color: black;
-//   border-radius: 5px 5px 0 0;
-//   height: 3rem;
-//   width: 14rem;
-//   & > * {
-//     @extend %flex-center;
-//   }
-//   & > p {
-//     span {
-//       margin-right: 0.2rem;
-//     }
-//   }
-// }
+.count-like {
+  @extend %flex-center;
+  span {
+    margin-right: 0.2rem;
+  }
+}

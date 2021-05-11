@@ -9,13 +9,13 @@ img {
 #photographer__img {
   width: 200px;
   height: 200px;
-  border-radius: 50%;
+  @extend %shadow-radius;
 }
 
 .photographer__img-responsive {
   width: 100px;
   height: 100px;
-  border-radius: 50%;
+  @extend %shadow-radius;
 }
 
 #gallery__card__img {
