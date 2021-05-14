@@ -1,12 +1,15 @@
 // @import "./vendors/css";
 // @import "./utils/css";
+@import "./utils/mixins";
 @import "./utils/variables";
 @import "./utils/placeholders";
 // @import "./base/css";
+@import "./base/fonts.scss";
 // @import "./layout/css";
 @import "./pages/home";
 @import "./pages/photographer";
 // @import "./components/css";
 @import "./components/button";
 @import "./components/img";
+@import "./components/modals";
 // @import "./themes/css";

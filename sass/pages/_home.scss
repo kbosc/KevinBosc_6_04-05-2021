@@ -7,4 +7,61 @@ body {
   margin: 0;
   padding: 0;
   background: rgba(255, 255, 255, 0.747);
+  font-family: "DM Sans", sans-serif;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 4rem;
+  & h1 {
+    @include font-family(36);
+    color: $primary-color;
+  }
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 6rem;
+}
+.gallery__card {
+  margin: 2rem 6rem;
+  &__artist {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    &__img {
+      width: 200px;
+      height: 200px;
+      @extend %shadow-radius;
+      margin-bottom: 1.5rem;
+    }
+    &__name {
+      color: $secondary-color;
+      @include font-family(36);
+    }
+  }
+  &__about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    & > * {
+      margin-bottom: 0.2rem;
+    }
+    &__location {
+      color: $primary-color;
+      @include font-family(13);
+    }
+    &__text {
+      @include font-family(10);
+    }
+    &__rates {
+      @include font-family(9);
+      color: #757575;
+    }
+  }
 }

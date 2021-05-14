@@ -18,21 +18,23 @@ img {
   @extend %shadow-radius;
 }
 
-#gallery__card__img {
+#portfolio__card__img {
   width: 350px;
   height: 300px;
   @extend %radius;
 }
 
-.gallery__card__img-responsive {
+.portfolio__card__img-responsive {
   width: 335px;
   height: 190px;
 }
 
-svg {
-  width: 15px;
-  // height: 20px;
+.svg-heart {
+  width: 17.5px;
+  height: 18.35px;
 }
 .like {
   color: $primary-color;
+  width: 17.5px;
+  height: 18.35px;
 }

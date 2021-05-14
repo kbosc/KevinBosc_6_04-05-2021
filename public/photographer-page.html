@@ -17,9 +17,9 @@
       <section class="photographer">
         <div class="photographer__section">
           <div class="photographer__section__about">
-            <h2 id="photographer__section__about__artist">Mimi Keel</h2>
-            <h3 id="photographer__section__about__location">London, UK</h3>
-            <p id="photographer__section__about__text">
+            <h2 class="photographer__section__about__artist">Mimi Keel</h2>
+            <h3 class="photographer__section__about__location">London, UK</h3>
+            <p class="photographer__section__about__text">
               Voir le beau dans le quotidien
             </p>
             <ul>
@@ -33,7 +33,7 @@
             <a href="#" class="btn">Contactez-moi</a>
           </div> -->
           <button class="photographer__section__btn btn" type="button">
-            <span>Contactez-moi</span>
+            Contactez-moi
           </button>
         </div>
         <img
@@ -50,7 +50,7 @@
             focusable="false"
             data-prefix="fas"
             data-icon="heart"
-            class="svg-inline--fa fa-heart fa-w-16"
+            class="svg-heart"
             role="img"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 512 512"
@@ -65,15 +65,9 @@
         </p>
         <p>300€ / jour</p>
       </div>
-      <!-- <p class="daily-rate">#insert like and rate</p> -->
-      <section class="gallery-container">
+      <section class="portfolio-container">
         <div>
           <label for="choose">Trier par</label>
-          <!-- <select name="" id="choose">
-            <option value="1">Popularité</option>
-            <option value="2">Date</option>
-            <option value="3">Titre</option>
-          </select> -->
           <!-- ---------------------TEST---------------- -->
           <div class="select" tabindex="1">
             <input
@@ -91,16 +85,16 @@
           </div>
           <!-- ---------------------TEST---------------- -->
         </div>
-        <div class="gallery">
-          <div class="gallery__card">
-            <a href="" class="gallery__card__img">
+        <div class="portfolio">
+          <div class="portfolio__card">
+            <a href="" class="portfolio__card__img">
               <img
                 src="img/photos/Mimi/Animals_Rainbow.jpg"
                 alt=""
-                id="gallery__card__img"
+                id="portfolio__card__img"
               />
             </a>
-            <div class="gallery__card__about">
+            <div class="portfolio__card__about">
               <p>Arc-en-cie</p>
               <div class="count-like">
                 <span>12</span>
@@ -123,15 +117,15 @@
               </div>
             </div>
           </div>
-          <div class="gallery__card">
-            <a href="" class="gallery__card__img">
+          <div class="portfolio__card">
+            <a href="" class="portfolio__card__img">
               <img
                 src="img/photos/Mimi/Animals_Rainbow.jpg"
                 alt=""
-                id="gallery__card__img"
+                id="portfolio__card__img"
               />
             </a>
-            <div class="gallery__card__about">
+            <div class="portfolio__card__about">
               <p>Arc-en-cie</p>
               <div class="count-like">
                 <span>12</span>
@@ -154,15 +148,15 @@
               </div>
             </div>
           </div>
-          <div class="gallery__card">
-            <a href="" class="gallery__card__img">
+          <div class="portfolio__card">
+            <a href="" class="portfolio__card__img">
               <img
                 src="img/photos/Mimi/Animals_Rainbow.jpg"
                 alt=""
-                id="gallery__card__img"
+                id="portfolio__card__img"
               />
             </a>
-            <div class="gallery__card__about">
+            <div class="portfolio__card__about">
               <p>Arc-en-cie</p>
               <div class="count-like">
                 <span>12</span>
@@ -185,15 +179,15 @@
               </div>
             </div>
           </div>
-          <div class="gallery__card">
-            <a href="" class="gallery__card__img">
+          <div class="portfolio__card">
+            <a href="" class="portfolio__card__img">
               <img
                 src="img/photos/Mimi/Animals_Rainbow.jpg"
                 alt=""
-                id="gallery__card__img"
+                id="portfolio__card__img"
               />
             </a>
-            <div class="gallery__card__about">
+            <div class="portfolio__card__about">
               <p>Arc-en-cie</p>
               <div class="count-like">
                 <span>12</span>
@@ -216,15 +210,15 @@
               </div>
             </div>
           </div>
-          <div class="gallery__card">
-            <a href="" class="gallery__card__img">
+          <div class="portfolio__card">
+            <a href="" class="portfolio__card__img">
               <img
                 src="img/photos/Mimi/Animals_Rainbow.jpg"
                 alt=""
-                id="gallery__card__img"
+                id="portfolio__card__img"
               />
             </a>
-            <div class="gallery__card__about">
+            <div class="portfolio__card__about">
               <p>Arc-en-cie</p>
               <div class="count-like">
                 <span>12</span>
@@ -247,15 +241,15 @@
               </div>
             </div>
           </div>
-          <div class="gallery__card">
-            <a href="" class="gallery__card__img">
+          <div class="portfolio__card">
+            <a href="" class="portfolio__card__img">
               <img
                 src="img/photos/Mimi/Animals_Rainbow.jpg"
                 alt=""
-                id="gallery__card__img"
+                id="portfolio__card__img"
               />
             </a>
-            <div class="gallery__card__about">
+            <div class="portfolio__card__about">
               <p>Arc-en-cie</p>
               <div class="count-like">
                 <span>12</span>
@@ -280,7 +274,77 @@
           </div>
         </div>
       </section>
+      <!-- -------------------test----------------------- -->
+      <aside id="modal1" class="modal" aria-hidden="true" role="dialog">
+        <div class="modal__wrapper">
+          <div class="modal__wrapper__close">
+            <svg
+              aria-hidden="true"
+              focusable="false"
+              data-prefix="fas"
+              data-icon="times"
+              class="modal-close out"
+              role="img"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 352 512"
+            >
+              <path
+                fill="currentColor"
+                d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"
+              ></path>
+            </svg>
+          </div>
+          <h1 class="modal__wrapper__title">
+            Contactez-moi <br />
+            <span>Mimi Keel</span>
+          </h1>
+          <div class="form">
+            <div class="form__firstname">
+              <label for="firstname">Prénom</label>
+              <input
+                type="text"
+                name="firstname"
+                class="form__firstname__input"
+                minlength="2"
+                required
+              />
+            </div>
+            <div class="form__lastname">
+              <label for="lastname">Nom</label>
+              <input
+                type="text"
+                name="lastname"
+                class="form__lastname__input"
+                minlength="2"
+                required
+              />
+            </div>
+            <div class="form__email">
+              <label for="Email">Email</label>
+              <input
+                type="text"
+                name="email"
+                class="form__email__input"
+                pattern=".+@globex.com"
+                required
+              />
+            </div>
+            <div class="form__text">
+              <label for="text">Votre message</label>
+              <input
+                type="text"
+                name="text"
+                class="form__text__input"
+                minlength="20"
+                required
+              />
+            </div>
+          </div>
+          <button class="btn out" id="modal-btn">Envoyer</button>
+        </div>
+      </aside>
+      <!-- -------------------test----------------------- -->
     </main>
-    <script src="js/script.js"></script>
+    <script src="js/app.js"></script>
   </body>
 </html>

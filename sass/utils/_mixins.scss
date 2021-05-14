@@ -1,0 +1,5 @@
+@mixin font-family($s: 20, $w: 400) {
+  // font-family: "DM Sans", sans-serif;
+  font-size: $s + px;
+  font-weight: $w;
+}
