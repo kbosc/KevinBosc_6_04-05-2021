@@ -3,3 +3,9 @@
   font-size: $s + px;
   font-weight: $w;
 }
+
+@mixin responsive-medium {
+  @media screen and (max-width: 910px) {
+    @content;
+  }
+}

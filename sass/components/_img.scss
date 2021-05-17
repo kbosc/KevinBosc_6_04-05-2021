@@ -3,30 +3,34 @@ img {
 }
 .logo {
   width: 200px;
-  height: 50px;
+  // height: 50px;
+  @include responsive-medium {
+    width: 11rem;
+  }
 }
 
 #photographer__img {
   width: 200px;
   height: 200px;
   @extend %shadow-radius;
-}
-
-.photographer__img-responsive {
-  width: 100px;
-  height: 100px;
-  @extend %shadow-radius;
+  @include responsive-medium {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    right: 0;
+    top: -0.5rem;
+  }
 }
 
 #portfolio__card__img {
   width: 350px;
   height: 300px;
   @extend %radius;
-}
-
-.portfolio__card__img-responsive {
-  width: 335px;
-  height: 190px;
+  @include responsive-medium {
+    width: 335px;
+    height: 190px;
+    object-position: 0 20%;
+  }
 }
 
 .svg-heart {

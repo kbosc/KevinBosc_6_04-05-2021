@@ -9,63 +9,124 @@
   @extend %flex-center;
   z-index: 2;
   &__wrapper {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     position: relative;
-    background-color: $secondary-color;
+    background-color: $tertiary-color;
+    // background-color: $secondary-color;
     width: 669px;
     height: 900px;
+    overflow: auto;
+    // display: flex;
+    // align-items: flex-start;
+    // flex-direction: column;
     @extend %radius;
-    // overflow: auto;
-    // max-width: calc(100vw - 3rem);
-    // max-width: calc(100vh - 3rem);
     &__title {
+      position: relative;
       @include font-family(64);
       margin: 1rem 2rem;
+      @include responsive-medium {
+        margin: 2rem 2rem;
+        font-size: 2rem;
+      }
     }
     &__close {
       color: white;
       position: absolute;
-      top: 2rem;
-      right: 2rem;
+      top: 0.5rem;
+      right: 0;
       cursor: pointer;
+      @include responsive-medium {
+        top: -0.5rem;
+        right: 0rem;
+      }
+    }
+    @include responsive-medium {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &__wrapper:last-child {
+    @include responsive-medium {
+      align-items: center;
     }
   }
 }
 .modal-close {
   height: 3.3rem;
+  @include responsive-medium {
+    width: 1.5rem;
+  }
 }
 
 .form {
   margin: 1rem 2rem;
+  color: #312e2e;
   @include font-family(36);
+  @include responsive-medium {
+    font-size: 1.5rem;
+  }
+  & > * {
+    @include responsive-medium {
+      margin-top: 1.2rem;
+    }
+  }
   & input {
     width: 100%;
     border: none;
     @extend %radius;
     @include font-family(36);
+    height: 68px;
+    @include responsive-medium {
+      height: 3rem;
+      font-size: 1.5rem;
+    }
+  }
+  & div:last-child input {
+    height: 170px;
+    @include responsive-medium {
+      height: 10rem;
+    }
   }
   &__firstname {
     &__input {
-      height: 68px;
+      @include responsive-medium {
+        margin-top: 0.5rem;
+      }
     }
   }
-  &__name {
+  &__lastname {
     &__input {
-      height: 68px;
+      @include responsive-medium {
+        margin-top: 0.5rem;
+      }
     }
   }
   &__email {
     &__input {
-      height: 68px;
+      @include responsive-medium {
+        margin-top: 0.5rem;
+      }
     }
   }
   &__text {
     margin-top: 1rem;
+    @include responsive-medium {
+      margin-top: 2rem;
+    }
     &__input {
-      height: 170px;
+      @include responsive-medium {
+        margin-top: 0.5rem;
+      }
     }
   }
 }
 
 #modal-btn {
   margin: 1rem 2rem;
+  @include responsive-medium {
+    margin: 2rem 50%;
+    transform: translate(-50%, 0);
+  }
 }

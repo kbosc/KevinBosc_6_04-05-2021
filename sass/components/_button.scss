@@ -18,11 +18,12 @@
 
 // ----------------btn-content-----------------
 .btn {
-  position: relative;
+  // position: relative;
   background-color: $primary-color;
   color: $light-grey;
   @include font-family(20, 700);
   @extend %radius;
+  // @extend %flex-center;
   width: 170px;
   height: 69px;
   border: none;
@@ -33,36 +34,20 @@
     background-color: $secondary-color;
     color: black;
   }
+  @include responsive-medium {
+    font-size: 40px;
+  }
 }
-// .btn > * {
-//   z-index: 2;
-// }
-// .btn::after {
-//   content: "";
-//   transition: background-color 0.3s ease;
-// }
-// .btn:hover::after {
-//   content: "";
-//   position: absolute;
-//   top: 0;
-//   left: 0;
-//   width: 100%;
-//   height: 100%;
-//   background-color: $secondary-color;
-//   color: black;
-//   z-index: 1;
-// }
-
 // ------------#########------------
 ul {
   list-style-type: none;
   display: flex;
+  // overflow: auto;
 }
 li {
   position: relative;
   border: 0.5px solid #c4c4c4;
   border-radius: 11px;
-  line-height: 16px;
   margin-right: 0.3rem;
   box-sizing: border-box;
   padding: 0 0.3rem;
@@ -71,26 +56,15 @@ li {
   cursor: pointer;
   transition: background-color 0.3s ease;
   @include font-family(12, 500);
+  @include responsive-medium {
+    font-size: 1rem;
+  }
+  // white-space: nowrap;
   &:hover {
     color: $light-grey;
     background-color: $primary-color;
   }
 }
-// li::after {
-//   content: "";
-//   transition: background-color 0.3s ease;
-// }
-// li:hover::after {
-//   content: "";
-//   position: absolute;
-//   top: 0;
-//   left: 0;
-//   width: 100%;
-//   height: 100%;
-//   color: $light-grey;
-//   background-color: $primary-color;
-//   z-index: 1;
-// }
 // ------------#########------------
 
 // ------Select Menu Photographer-page-------------
@@ -101,7 +75,7 @@ li {
   width: 170px;
   height: 69px;
   color: $light-grey;
-  & .selectopt {
+  &__opt {
     opacity: 0;
     position: absolute;
     left: -99999px;
@@ -158,7 +132,7 @@ li {
   pointer-events: all;
 }
 
-.selectopt:checked + label {
+.select__opt:checked + label {
   order: 1;
   z-index: 2;
   background: $primary-color;
@@ -166,7 +140,7 @@ li {
   position: relative;
 }
 
-.selectopt:checked + label:after {
+.select__opt:checked + label:after {
   content: "";
   width: 0;
   height: 0;

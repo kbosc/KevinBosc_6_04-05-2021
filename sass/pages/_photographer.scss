@@ -1,5 +1,8 @@
 header {
   margin: 2rem 4rem;
+  @include responsive-medium {
+    margin: 3rem 1.5rem;
+  }
 }
 .count-like > p {
   width: 22px;
@@ -7,33 +10,73 @@ header {
 }
 
 .photographer {
+  position: relative;
   margin: 1rem 4rem;
   display: flex;
   justify-content: space-between;
   background-color: $light-grey;
   @extend %radius;
   padding: 3rem;
+  @include responsive-medium {
+    background-color: transparent;
+    margin: 2rem 1.5rem;
+    padding: 0;
+  }
   &__section {
     display: flex;
+    &__btn {
+      @include responsive-medium {
+        position: fixed;
+        left: 50%;
+        bottom: 5%;
+        transform: translate(-50%, 0);
+      }
+    }
   }
 }
 
 .photographer__section__about {
   margin-right: 5rem;
+  @include responsive-medium {
+    margin: 0;
+  }
   & > * {
     margin-bottom: 1rem;
+    @include responsive-medium {
+      margin: 0;
+    }
   }
   &__artist {
     @include font-family(64);
     color: $secondary-color;
+    @include responsive-medium {
+      font-size: 3rem;
+    }
   }
   &__location {
     @include font-family(24);
     color: $primary-color;
+    @include responsive-medium {
+      font-size: 1.2rem;
+    }
   }
   &__text {
     @include font-family(18);
     color: $light-black;
+    @include responsive-medium {
+      font-size: 1.2rem;
+    }
+  }
+}
+// .photographer__section__about:last-child {
+//   @include responsive-medium {
+//     margin-top: 0.2rem;
+//     background-color: green;
+//   }
+// }
+#filter {
+  @include responsive-medium {
+    margin-top: 0.2rem;
   }
 }
 
@@ -50,6 +93,9 @@ header {
   // justify-content: space-around;
   // height: 4rem;
   // width: 22rem;
+  @include responsive-medium {
+    display: none;
+  }
   & > * {
     // @extend %flex-center;
   }
@@ -63,9 +109,15 @@ header {
 
 .portfolio-container {
   margin-left: 4rem;
-  & > div {
+  @include responsive-medium {
+    margin: 0 1.5rem;
+  }
+  &__select {
     display: flex;
     align-items: baseline;
+    @include responsive-medium {
+      display: none;
+    }
     & > label {
       margin-right: 1rem;
       @include font-family(18, 700);
@@ -73,6 +125,7 @@ header {
   }
 }
 .portfolio {
+  display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   // margin-left: 4rem;
@@ -80,6 +133,10 @@ header {
   &__card {
     margin-right: 4rem;
     margin-bottom: 2rem;
+    @include responsive-medium {
+      margin: 0;
+      margin-bottom: 1rem;
+    }
     &__about {
       display: flex;
       justify-content: space-between;
