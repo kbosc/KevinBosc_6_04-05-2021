@@ -13,11 +13,22 @@ body {
 nav {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   justify-content: space-between;
   margin: 0 4rem;
   & h1 {
     @include font-family(36);
     color: $primary-color;
+    @include responsive-medium {
+      font-size: 1rem;
+    }
+  }
+  @include responsive-large {
+    justify-content: space-around;
+  }
+  @include responsive-medium {
+    margin: 0;
+    justify-content: space-between;
   }
 }
 
@@ -26,9 +37,15 @@ nav {
   flex-wrap: wrap;
   justify-content: space-between;
   margin-top: 6rem;
+  @include responsive-medium {
+    margin-top: 0;
+  }
 }
 .gallery__card {
   margin: 2rem 6rem;
+  @include responsive-medium {
+    margin: 1rem 1rem;
+  }
   &__artist {
     display: flex;
     flex-direction: column;

@@ -3,27 +3,23 @@
   text-decoration: none;
   color: black;
   background-color: $secondary-color;
-  font-size: 18px;
   padding: 0.3rem 0.7rem;
   @extend %radius;
   @include font-family(18, 700);
-  position: absolute;
+  position: fixed;
   left: 50%;
   top: 1%;
-  transform: translate(-50%);
   opacity: 0;
-  // appear
-  // opacity: 1;
+  transform: translate(-50%);
+  transition: opacity 0.3s;
 }
 
 // ----------------btn-content-----------------
 .btn {
-  // position: relative;
   background-color: $primary-color;
   color: $light-grey;
   @include font-family(20, 700);
   @extend %radius;
-  // @extend %flex-center;
   width: 170px;
   height: 69px;
   border: none;
@@ -35,13 +31,30 @@
     color: black;
   }
   @include responsive-medium {
-    font-size: 40px;
+    width: 200px;
+    height: 40px;
+  }
+}
+// ---------Ul nav index html-----------
+.navigation-filter {
+  @include responsive-large {
+    order: 3;
+    margin-top: 2rem;
+  }
+  @include responsive-medium {
+    justify-content: center;
+  }
+  & li {
+    @include responsive-medium {
+      margin-top: 0.3rem;
+    }
   }
 }
 // ------------#########------------
 ul {
   list-style-type: none;
   display: flex;
+  flex-wrap: wrap;
   // overflow: auto;
 }
 li {
@@ -63,6 +76,9 @@ li {
   &:hover {
     color: $light-grey;
     background-color: $primary-color;
+  }
+  @include responsive-medium {
+    margin-top: 0.3rem;
   }
 }
 // ------------#########------------

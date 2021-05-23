@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap");
-.form input, .modal__wrapper, #portfolio__card__img, .btn, .content, .photographer {
+.modal-img__wrapper, .form input, .modal__wrapper, .portfolio-card-img, .btn, .content, .photographer {
   border-radius: 5px;
 }
 
@@ -29,6 +29,7 @@ body {
 nav {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   justify-content: space-between;
   margin: 0 4rem;
 }
@@ -37,6 +38,22 @@ nav h1 {
   font-weight: 400;
   color: #901c1c;
 }
+@media screen and (max-width: 910px) {
+  nav h1 {
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 1350px) {
+  nav {
+    justify-content: space-around;
+  }
+}
+@media screen and (max-width: 910px) {
+  nav {
+    margin: 0;
+    justify-content: space-between;
+  }
+}
 
 .gallery {
   display: flex;
@@ -44,9 +61,19 @@ nav h1 {
   justify-content: space-between;
   margin-top: 6rem;
 }
+@media screen and (max-width: 910px) {
+  .gallery {
+    margin-top: 0;
+  }
+}
 
 .gallery__card {
   margin: 2rem 6rem;
+}
+@media screen and (max-width: 910px) {
+  .gallery__card {
+    margin: 1rem 1rem;
+  }
 }
 .gallery__card__artist {
   display: flex;
@@ -93,6 +120,7 @@ header {
 @media screen and (max-width: 910px) {
   header {
     margin: 3rem 1.5rem;
+    margin-bottom: 1rem;
   }
 }
 
@@ -261,15 +289,15 @@ header {
   text-decoration: none;
   color: black;
   background-color: #d3573c;
-  font-size: 18px;
   padding: 0.3rem 0.7rem;
   font-size: 18px;
   font-weight: 700;
-  position: absolute;
+  position: fixed;
   left: 50%;
   top: 1%;
-  transform: translate(-50%);
   opacity: 0;
+  transform: translate(-50%);
+  transition: opacity 0.3s;
 }
 
 .btn {
@@ -290,13 +318,32 @@ header {
 }
 @media screen and (max-width: 910px) {
   .btn {
-    font-size: 40px;
+    width: 200px;
+    height: 40px;
+  }
+}
+
+@media screen and (max-width: 1350px) {
+  .navigation-filter {
+    order: 3;
+    margin-top: 2rem;
+  }
+}
+@media screen and (max-width: 910px) {
+  .navigation-filter {
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 910px) {
+  .navigation-filter li {
+    margin-top: 0.3rem;
   }
 }
 
 ul {
   list-style-type: none;
   display: flex;
+  flex-wrap: wrap;
 }
 
 li {
@@ -321,6 +368,11 @@ li {
 li:hover {
   color: #fafafa;
   background-color: #901c1c;
+}
+@media screen and (max-width: 910px) {
+  li {
+    margin-top: 0.3rem;
+  }
 }
 
 .select {
@@ -437,13 +489,13 @@ img {
   }
 }
 
-#portfolio__card__img {
+.portfolio-card-img {
   width: 350px;
   height: 300px;
 }
 @media screen and (max-width: 910px) {
-  #portfolio__card__img {
-    width: 335px;
+  .portfolio-card-img {
+    width: 100%;
     height: 190px;
     object-position: 0 20%;
   }
@@ -471,14 +523,15 @@ img {
   z-index: 2;
 }
 .modal__wrapper {
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: 10%;
+  left: 30%;
   position: relative;
   background-color: #db8876;
   width: 669px;
   height: 900px;
   overflow: auto;
+  animation-name: modalopen;
+  animation-duration: 0.8s;
 }
 .modal__wrapper__title {
   position: relative;
@@ -509,6 +562,8 @@ img {
   .modal__wrapper {
     width: 100%;
     height: 100%;
+    top: 0;
+    left: 0;
   }
 }
 @media screen and (max-width: 910px) {
@@ -600,6 +655,77 @@ img {
     margin: 2rem 50%;
     transform: translate(-50%, 0);
   }
+}
+
+@keyframes modalopen {
+  from {
+    opacity: 0;
+    transform: translateY(-150px);
+  }
+  to {
+    opacity: 1;
+  }
+}
+.modal-img {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
+  z-index: 2;
+  color: #901c1c;
+}
+.modal-img__wrapper {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: relative;
+  width: 80%;
+  height: 70%;
+  display: flex;
+  justify-content: space-around;
+  overflow: hidden;
+}
+@media screen and (max-width: 910px) {
+  .modal-img__wrapper {
+    align-items: center;
+    height: 40%;
+  }
+}
+.modal-img__wrapper__chevron {
+  width: 4rem;
+  cursor: pointer;
+}
+.modal-img__wrapper__card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  height: 100%;
+}
+.modal-img__wrapper__card__title {
+  font-size: 20px;
+  font-weight: 400;
+  margin-top: 0.5rem;
+}
+.modal-img__wrapper__card__cross {
+  position: absolute;
+  width: 4rem;
+  right: -6rem;
+  cursor: pointer;
+}
+@media screen and (max-width: 910px) {
+  .modal-img__wrapper__card__cross {
+    width: 1.5rem;
+    right: -1.7rem;
+  }
+}
+
+#modal-img {
+  overflow: hidden;
+  object-position: 0 30%;
 }
 
 /*# sourceMappingURL=style.css.map */

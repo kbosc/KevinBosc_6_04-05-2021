@@ -2,6 +2,7 @@ header {
   margin: 2rem 4rem;
   @include responsive-medium {
     margin: 3rem 1.5rem;
+    margin-bottom: 1rem;
   }
 }
 .count-like > p {
