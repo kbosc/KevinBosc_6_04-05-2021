@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fisheye</title>
     <link rel="stylesheet" href="css/style.css" />
+    <script src="js/main.js" type="module" defer></script>
+    <script src="js/home-page.js" defer></script>
   </head>
   <body>
     <header>
@@ -28,8 +30,8 @@
       </nav>
     </header>
     <main>
-      <div class="gallery">
-        <div class="gallery__card">
+      <div id="gallery-wrapper" class="gallery">
+        <!-- <div class="gallery__card">
           <a href="#" class="gallery__card__artist">
             <img
               src="img/photos/Photographers/RhodeDubois.jpg"
@@ -51,193 +53,8 @@
             <li>#travel</li>
             <li>#animals</li>
           </ul>
-        </div>
-        <div class="gallery__card">
-          <a href="#" class="gallery__card__artist">
-            <img
-              src="img/photos/Photographers/RhodeDubois.jpg"
-              alt=""
-              class="gallery__card__artist__img"
-            />
-            <h2 class="gallery__card__artist__name">Mimi Keel</h2>
-          </a>
-          <section class="gallery__card__about">
-            <h3 class="gallery__card__about__location">London, UK</h3>
-            <p class="gallery__card__about__text">
-              Voir le beau dans le quotidien
-            </p>
-            <p class="gallery__card__about__rates">400€/jour</p>
-          </section>
-          <ul>
-            <li>#portrait</li>
-            <li>#events</li>
-            <li>#travel</li>
-            <li>#animals</li>
-          </ul>
-        </div>
-        <div class="gallery__card">
-          <a href="#" class="gallery__card__artist">
-            <img
-              src="img/photos/Photographers/RhodeDubois.jpg"
-              alt=""
-              class="gallery__card__artist__img"
-            />
-            <h2 class="gallery__card__artist__name">Mimi Keel</h2>
-          </a>
-          <section class="gallery__card__about">
-            <h3 class="gallery__card__about__location">London, UK</h3>
-            <p class="gallery__card__about__text">
-              Voir le beau dans le quotidien
-            </p>
-            <p class="gallery__card__about__rates">400€/jour</p>
-          </section>
-          <ul>
-            <li>#portrait</li>
-            <li>#events</li>
-            <li>#travel</li>
-            <li>#animals</li>
-          </ul>
-        </div>
-        <div class="gallery__card">
-          <a href="#" class="gallery__card__artist">
-            <img
-              src="img/photos/Photographers/RhodeDubois.jpg"
-              alt=""
-              class="gallery__card__artist__img"
-            />
-            <h2 class="gallery__card__artist__name">Mimi Keel</h2>
-          </a>
-          <section class="gallery__card__about">
-            <h3 class="gallery__card__about__location">London, UK</h3>
-            <p class="gallery__card__about__text">
-              Voir le beau dans le quotidien
-            </p>
-            <p class="gallery__card__about__rates">400€/jour</p>
-          </section>
-          <ul>
-            <li>#portrait</li>
-            <li>#events</li>
-            <li>#travel</li>
-            <li>#animals</li>
-          </ul>
-        </div>
-        <div class="gallery__card">
-          <a href="#" class="gallery__card__artist">
-            <img
-              src="img/photos/Photographers/RhodeDubois.jpg"
-              alt=""
-              class="gallery__card__artist__img"
-            />
-            <h2 class="gallery__card__artist__name">Mimi Keel</h2>
-          </a>
-          <section class="gallery__card__about">
-            <h3 class="gallery__card__about__location">London, UK</h3>
-            <p class="gallery__card__about__text">
-              Voir le beau dans le quotidien
-            </p>
-            <p class="gallery__card__about__rates">400€/jour</p>
-          </section>
-          <ul>
-            <li>#portrait</li>
-            <li>#events</li>
-            <li>#travel</li>
-            <li>#animals</li>
-          </ul>
-        </div>
-        <div class="gallery__card">
-          <a href="#" class="gallery__card__artist">
-            <img
-              src="img/photos/Photographers/RhodeDubois.jpg"
-              alt=""
-              class="gallery__card__artist__img"
-            />
-            <h2 class="gallery__card__artist__name">Mimi Keel</h2>
-          </a>
-          <section class="gallery__card__about">
-            <h3 class="gallery__card__about__location">London, UK</h3>
-            <p class="gallery__card__about__text">
-              Voir le beau dans le quotidien
-            </p>
-            <p class="gallery__card__about__rates">400€/jour</p>
-          </section>
-          <ul>
-            <li>#portrait</li>
-            <li>#events</li>
-            <li>#travel</li>
-            <li>#animals</li>
-          </ul>
-        </div>
-        <div class="gallery__card">
-          <a href="#" class="gallery__card__artist">
-            <img
-              src="img/photos/Photographers/RhodeDubois.jpg"
-              alt=""
-              class="gallery__card__artist__img"
-            />
-            <h2 class="gallery__card__artist__name">Mimi Keel</h2>
-          </a>
-          <section class="gallery__card__about">
-            <h3 class="gallery__card__about__location">London, UK</h3>
-            <p class="gallery__card__about__text">
-              Voir le beau dans le quotidien
-            </p>
-            <p class="gallery__card__about__rates">400€/jour</p>
-          </section>
-          <ul>
-            <li>#portrait</li>
-            <li>#events</li>
-            <li>#travel</li>
-            <li>#animals</li>
-          </ul>
-        </div>
-        <div class="gallery__card">
-          <a href="#" class="gallery__card__artist">
-            <img
-              src="img/photos/Photographers/RhodeDubois.jpg"
-              alt=""
-              class="gallery__card__artist__img"
-            />
-            <h2 class="gallery__card__artist__name">Mimi Keel</h2>
-          </a>
-          <section class="gallery__card__about">
-            <h3 class="gallery__card__about__location">London, UK</h3>
-            <p class="gallery__card__about__text">
-              Voir le beau dans le quotidien
-            </p>
-            <p class="gallery__card__about__rates">400€/jour</p>
-          </section>
-          <ul>
-            <li>#portrait</li>
-            <li>#events</li>
-            <li>#travel</li>
-            <li>#animals</li>
-          </ul>
-        </div>
-        <div class="gallery__card">
-          <a href="#" class="gallery__card__artist">
-            <img
-              src="img/photos/Photographers/RhodeDubois.jpg"
-              alt=""
-              class="gallery__card__artist__img"
-            />
-            <h2 class="gallery__card__artist__name">Mimi Keel</h2>
-          </a>
-          <section class="gallery__card__about">
-            <h3 class="gallery__card__about__location">London, UK</h3>
-            <p class="gallery__card__about__text">
-              Voir le beau dans le quotidien
-            </p>
-            <p class="gallery__card__about__rates">400€/jour</p>
-          </section>
-          <ul>
-            <li>#portrait</li>
-            <li>#events</li>
-            <li>#travel</li>
-            <li>#animals</li>
-          </ul>
-        </div>
+        </div> -->
       </div>
     </main>
-    <script src="js/home-page.js"></script>
   </body>
 </html>

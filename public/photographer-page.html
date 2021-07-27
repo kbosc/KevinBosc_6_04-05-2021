@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fisheye Artist Page</title>
     <link rel="stylesheet" href="css/style.css" />
-    <meta name="viewport" content="width=device-width" />
+    <script src="js/main.js" type="module" defer></script>
+    <script src="js/photographer-page.js" defer></script>
   </head>
   <body>
     <header>
@@ -15,8 +16,8 @@
       /></a>
     </header>
     <main>
-      <section class="photographer">
-        <div class="photographer__section">
+      <section id="photographer-wrapper" class="photographer">
+        <!-- <div class="photographer__section">
           <div class="photographer__section__about">
             <h2 class="photographer__section__about__artist">Mimi Keel</h2>
             <h3 class="photographer__section__about__location">London, UK</h3>
@@ -30,9 +31,6 @@
               <li>#Animals</li>
             </ul>
           </div>
-          <!-- <div class="photographer__section__btn">
-            <a href="#" class="btn">Contactez-moi</a>
-          </div> -->
           <button class="photographer__section__btn btn" type="button">
             Contactez-moi
           </button>
@@ -41,7 +39,7 @@
           src="img/photos/Photographers/RhodeDubois.jpg"
           alt=""
           id="photographer__img"
-        />
+        /> -->
       </section>
       <div class="daily-rate">
         <p>
@@ -86,8 +84,8 @@
           </div>
           <!-- ---------------------TEST---------------- -->
         </div>
-        <div class="portfolio">
-          <div class="portfolio__card">
+        <div id="portfolio-wrapper" class="portfolio">
+          <!-- <div class="portfolio__card">
             <a href="#" class="portfolio__card__img">
               <img
                 src="img/photos/Mimi/Animals_Rainbow.jpg"
@@ -99,7 +97,7 @@
               <p>Arc-en-cie</p>
               <div class="count-like">
                 <span>12</span>
-                <!-- <p>12</p> -->
+                
                 <svg
                   aria-hidden="true"
                   focusable="false"
@@ -117,162 +115,7 @@
                 </svg>
               </div>
             </div>
-          </div>
-          <div class="portfolio__card">
-            <a href="#" class="portfolio__card__img">
-              <img
-                src="img/photos/Mimi/Animals_Rainbow.jpg"
-                alt=""
-                class="portfolio-card-img"
-              />
-            </a>
-            <div class="portfolio__card__about">
-              <p>Arc-en-cie</p>
-              <div class="count-like">
-                <span>12</span>
-                <!-- <p>12</p> -->
-                <svg
-                  aria-hidden="true"
-                  focusable="false"
-                  data-icon="heart"
-                  role="img"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 512 512"
-                  class="like"
-                  aria-label="like"
-                >
-                  <path
-                    fill="currentColor"
-                    d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"
-                  ></path>
-                </svg>
-              </div>
-            </div>
-          </div>
-          <div class="portfolio__card">
-            <a href="" class="portfolio__card__img">
-              <img
-                src="img/photos/Mimi/Animals_Rainbow.jpg"
-                alt=""
-                class="portfolio-card-img"
-              />
-            </a>
-            <div class="portfolio__card__about">
-              <p>Arc-en-cie</p>
-              <div class="count-like">
-                <span>12</span>
-                <!-- <p>12</p> -->
-                <svg
-                  aria-hidden="true"
-                  focusable="false"
-                  data-icon="heart"
-                  role="img"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 512 512"
-                  class="like"
-                  aria-label="like"
-                >
-                  <path
-                    fill="currentColor"
-                    d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"
-                  ></path>
-                </svg>
-              </div>
-            </div>
-          </div>
-          <div class="portfolio__card">
-            <a href="" class="portfolio__card__img">
-              <img
-                src="img/photos/Mimi/Animals_Rainbow.jpg"
-                alt=""
-                class="portfolio-card-img"
-              />
-            </a>
-            <div class="portfolio__card__about">
-              <p>Arc-en-cie</p>
-              <div class="count-like">
-                <span>12</span>
-                <!-- <p>12</p> -->
-                <svg
-                  aria-hidden="true"
-                  focusable="false"
-                  data-icon="heart"
-                  role="img"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 512 512"
-                  class="like"
-                  aria-label="like"
-                >
-                  <path
-                    fill="currentColor"
-                    d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"
-                  ></path>
-                </svg>
-              </div>
-            </div>
-          </div>
-          <div class="portfolio__card">
-            <a href="" class="portfolio__card__img">
-              <img
-                src="img/photos/Mimi/Animals_Rainbow.jpg"
-                alt=""
-                class="portfolio-card-img"
-              />
-            </a>
-            <div class="portfolio__card__about">
-              <p>Arc-en-cie</p>
-              <div class="count-like">
-                <span>12</span>
-                <!-- <p>12</p> -->
-                <svg
-                  aria-hidden="true"
-                  focusable="false"
-                  data-icon="heart"
-                  role="img"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 512 512"
-                  class="like"
-                  aria-label="like"
-                >
-                  <path
-                    fill="currentColor"
-                    d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"
-                  ></path>
-                </svg>
-              </div>
-            </div>
-          </div>
-          <div class="portfolio__card">
-            <a href="" class="portfolio__card__img">
-              <img
-                src="img/photos/Mimi/Animals_Rainbow.jpg"
-                alt=""
-                class="portfolio-card-img"
-              />
-            </a>
-            <div class="portfolio__card__about">
-              <p>Arc-en-cie</p>
-              <div class="count-like">
-                <span>12</span>
-                <!-- <p>12</p> -->
-                <svg
-                  aria-hidden="true"
-                  focusable="false"
-                  data-icon="heart"
-                  role="img"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 512 512"
-                  class="like"
-                  aria-label="like"
-                >
-                  <path
-                    fill="currentColor"
-                    d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"
-                  ></path>
-                </svg>
-              </div>
-            </div>
-          </div>
+          </div> -->
         </div>
       </section>
       <aside id="modal1" class="modal" aria-hidden="true" role="dialog">
@@ -366,7 +209,7 @@
           </svg>
           <div class="modal-img__wrapper__card">
             <img
-              src="img/photos/Mimi/Animals_Rainbow.jpg"
+              src="img/photos/Mimi Keel//Animals_Rainbow.jpg"
               alt=""
               id="modal-img"
             />
@@ -413,6 +256,5 @@
         </div>
       </aside>
     </main>
-    <script src="js/photographer-page.js"></script>
   </body>
 </html>
