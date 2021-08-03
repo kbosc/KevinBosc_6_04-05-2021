@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/style.css" />
     <script src="js/main.js" type="module" defer></script>
     <script src="js/photographer-page.js" defer></script>
+    <!-- <script src="js/lightbox.js" defer></script> -->
   </head>
   <body>
     <header>
@@ -197,6 +198,7 @@
               svg-inline--fa
               fa-chevron-left fa-w-10
               modal-img__wrapper__chevron
+              chevron-prev
             "
             role="img"
             xmlns="http://www.w3.org/2000/svg"
@@ -213,7 +215,9 @@
               alt=""
               id="modal-img"
             />
-            <p class="modal-img__wrapper__card__title">Arc-en-ciel</p>
+            <p class="modal-img__wrapper__card__title" id="modal-title">
+              Arc-en-ciel
+            </p>
             <svg
               aria-hidden="true"
               focusable="false"
@@ -243,6 +247,7 @@
               svg-inline--fa
               fa-chevron-right fa-w-10
               modal-img__wrapper__chevron
+              chevron-next
             "
             role="img"
             xmlns="http://www.w3.org/2000/svg"
