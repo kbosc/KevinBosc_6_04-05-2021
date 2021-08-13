@@ -37,7 +37,8 @@ let currentPhotographer;
     element.addEventListener("click", closeModal);
   });
 
-  function openModalImg() {
+  function openModalImg(e) {
+    e.preventDefault();
     modalImg.style.display = "block";
     console.log(this);
     console.log(mediaPhotographer);
@@ -45,12 +46,27 @@ let currentPhotographer;
     console.log(mediaPhotographer[imgId]);
     if (mediaPhotographer[imgId] != undefined) {
       this.classList.add("active");
-      document
-        .getElementById("modal-img")
-        .setAttribute(
-          "src",
-          `img/photos/${currentPhotographer.name}/${mediaPhotographer[imgId].image}`
-        );
+      let x = "";
+      if (mediaPhotographer[imgId].video) {
+        x = video({
+          controls: true,
+          src: `img/photos/${currentPhotographer.name}/${mediaPhotographer[imgId].video}`,
+        });
+        // x = `
+        //   <video controls src="img/photos/${currentPhotographer.name}/${mediaPhotographer[imgId].video}"></video>
+        // `;
+      }
+      if (mediaPhotographer[imgId].image) {
+        x = image({
+          src: `img/photos/${currentPhotographer.name}/${mediaPhotographer[imgId].image}`,
+        });
+      }
+
+      document.getElementById("lightbox").innerHTML = x;
+      // .setAttribute(
+      //   "src",
+      //   `img/photos/${currentPhotographer.name}/${mediaPhotographer[imgId].image}`
+      // );
       document.getElementById("modal-title").innerHTML =
         mediaPhotographer[imgId].alt;
     }
@@ -122,7 +138,6 @@ function addPhotographerResume(photographers, media) {
         cards += `<div class="portfolio__card">
         <a href="#" class="portfolio__card__img" data-img-id="${media.id}">
           <video
-          controls
             src="img/photos/${found.name}/${media.video}"
             alt=""
             class="portfolio-card-img"
@@ -155,11 +170,10 @@ function addPhotographerResume(photographers, media) {
       if (media.image) {
         cards += `<div class="portfolio__card">
         <a href="#" class="portfolio__card__img" data-img-id="${media.id}">
-          <img
-            src="img/photos/${found.name}/${media.image}"
-            alt=""
-            class="portfolio-card-img"
-          />
+        ${image({
+          src: `img/photos/${found.name}/${media.image}`,
+          class: "portfolio-card-img",
+        })}
         </a>
         <div class="portfolio__card__about">
           <p>${media.title}</p>

@@ -1,11 +1,13 @@
 class Lightbox {
   static init() {
+    // const links = document.querySelectorAll('a[href$=".jpg"], a[href$=".mp4"]')
     const links = document
-      //   .querySelectorAll('a[href$=".jpg"], a[href$=".mp4"]')
-      .querySelectorAll('portfolio-card-img[src$=".jpg"]')
+      .querySelectorAll('img[src$=".jpg"], img[src$=".mp4"]')
+      // .querySelectorAll('portfolio-card-img[src$=".jpg"]')
       .forEach((link) =>
         link.addEventListener("click", (e) => {
           e.preventDefault();
+          console.log(e);
           //   new Lightbox(e.currentTarget.getAttribute("href"));
           new Lightbox(e.currentTarget.getAttribute("src"));
         })
