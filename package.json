@@ -15,5 +15,11 @@
   "bugs": {
     "url": "https://github.com/kbosc/KevinBosc_6_04-05-2021/issues"
   },
-  "homepage": "https://github.com/kbosc/KevinBosc_6_04-05-2021#readme"
+  "homepage": "https://github.com/kbosc/KevinBosc_6_04-05-2021#readme",
+  "devDependencies": {
+    "sass": "^1.37.5"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
