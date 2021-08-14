@@ -1,5 +1,8 @@
 function imageCard(props) {
-    const {found, media} = props;
+    const {
+      found,
+      media,
+    } = props;
     return `<div class="portfolio__card">
     <a href="#" class="portfolio__card__img" data-img-id="${media.id}">
     ${image({
