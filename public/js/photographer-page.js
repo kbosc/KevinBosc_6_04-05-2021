@@ -59,18 +59,7 @@ function addPhotographerResume(photographers, media) {
     const parsedMedia = parseInt(photographerIdMedia, 10);
     if (parsed == parsedMedia) {
       mediaPhotographer[media.id] = media;
-      if (media.video) {
-        cards += videoCard({
-          found,
-          media,
-        });
-      }
-      if (media.image) {
-        cards += imageCard({
-          found,
-          media,
-        });
-      }
+      cards += MediaFactory(media, found);
     }
   });
   portfolioWrapper.innerHTML = cards;
