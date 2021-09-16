@@ -728,6 +728,11 @@ img {
   object-position: 0 30%;
 }
 
+#lightbox img {
+  height: 100%;
+  width: 100%;
+}
+
 .lightbox {
   position: fixed;
   top: 0;
