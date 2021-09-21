@@ -1,3 +1,15 @@
+// --------------récupération photographerid in url -----------------
+const queryString = window.location.search;
+// console.log(queryString);
+const urlParams = new URLSearchParams(queryString);
+const photographerId = urlParams.get("photographerid");
+// console.log(photographerId);
+if (!photographerId) {
+  window.location = "/public";
+}
+let mediaPhotographer = [];
+let currentPhotographer;
+
 document.addEventListener(onFetchData.name, (e) => {
   const { data } = e;
   const { portfolioHtml, photographerHtml } = PhotographerResumeFactory(
@@ -16,15 +28,10 @@ document.addEventListener(onFetchData.name, (e) => {
   document.querySelectorAll(".portfolio__card__img").forEach((element) => {
     element.addEventListener("click", openModalImg);
   });
+
+  document.querySelectorAll("#filter li").forEach((element) => {
+    element.addEventListener("click", function () {
+      displayMediasByTag.call(this, data.media);
+    });
+  });
 });
-// --------------récupération photographerid in url -----------------
-const queryString = window.location.search;
-// console.log(queryString);
-const urlParams = new URLSearchParams(queryString);
-const photographerId = urlParams.get("photographerid");
-// console.log(photographerId);
-if (!photographerId) {
-  window.location = "/public";
-}
-let mediaPhotographer = [];
-let currentPhotographer;

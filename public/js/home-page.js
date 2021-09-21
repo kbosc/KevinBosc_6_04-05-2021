@@ -8,62 +8,39 @@ window.addEventListener("scroll", (e) => {
     btn.style.opacity = 0;
   }
 });
-// window.addEventListener("scroll", () => {
-//   if (window.scrollY > 10) {
-//     btn.classList.add(".active");
-//     btn.style.opacity = 0.1;
-//   }
-// });
 
-(async () => {
-  const res = await fetch("./json/data.json");
-  if (!res.ok) {
-    throw new Error("Impossible de fetch");
-  }
-  const data = await res.json();
+document.addEventListener(onFetchData.name, (e) => {
+  const { data } = e;
   console.log(data);
-  addPhotographerCard(data.photographers);
-})();
-
-function addPhotographerCard(photographers) {
   const galleryWrapper = document.getElementById("gallery-wrapper");
-  const html = photographers.reduce((acc, photographer) => {
-    const arrayTags = photographer.tags; // tableaux des tags des photographes
-    console.log(arrayTags);
-    acc += `
-      <div class="gallery__card">
-           <a href="photographer-page.html?photographerid=${
-             photographer.id
-           }" class="gallery__card__artist">
-             <img
-               src="img/photos/Photographers/${photographer.portrait}"
-               alt=""
-               class="gallery__card__artist__img"
-             />
-             <h2 class="gallery__card__artist__name">${photographer.name}</h2>
-           </a>
-           <section class="gallery__card__about">
-             <h3 class="gallery__card__about__location">${photographer.city}, ${
-      photographer.country
-    }</h3>
-             <p class="gallery__card__about__text">
-             ${photographer.tagline}
-             </p>
-             <p class="gallery__card__about__rates">${
-               photographer.price
-             }€/jour</p>
-           </section>
-           <ul>
-             ${arrayTags
-               .map((element) => {
-                 return `<li>#${element}</li>`;
-               })
-               .join("")}
-           </ul>
-         </div>`;
+  galleryWrapper.innerHTML = PhotographerCardsFactory(data.photographers);
 
-    return acc;
-  }, "");
-  // console.log(html);
-  galleryWrapper.innerHTML = html;
+  document.querySelectorAll(".navigation-filter li").forEach((element) => {
+    console.log(element);
+    element.addEventListener("click", function () {
+      console.log("click");
+      displayPhotographersByTag.call(this, data.photographers);
+    });
+  });
+});
+
+function displayPhotographersByTag(photographers) {
+  let tag = this.innerHTML.replace("#", "");
+  let portfolioWrapper = document.querySelector("#gallery-wrapper");
+  portfolioWrapper.innerHTML = generatePortfolioHtml(photographers, tag);
+  document.querySelectorAll(".portfolio__card__img").forEach((element) => {
+    element.addEventListener("click", openModalImg);
+  });
+}
+
+function generatePortfolioHtml(photographers, tag) {
+  const photographerFilters = photographers.filter((photographer) => {
+    console.log(photographer.tags);
+    console.log(tag);
+    return photographer.tags.includes(tag.toLowerCase());
+  });
+  console.log(tag);
+  console.log(photographerFilters);
+  console.log(photographers);
+  return PhotographerCardsFactory(photographerFilters);
 }
