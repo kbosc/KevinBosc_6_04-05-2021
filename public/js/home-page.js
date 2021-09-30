@@ -11,36 +11,15 @@ window.addEventListener("scroll", (e) => {
 
 document.addEventListener(onFetchData.name, (e) => {
   const { data } = e;
-  console.log(data);
+  // console.log(data);
   const galleryWrapper = document.getElementById("gallery-wrapper");
   galleryWrapper.innerHTML = PhotographerCardsFactory(data.photographers);
 
   document.querySelectorAll(".navigation-filter li").forEach((element) => {
-    console.log(element);
+    // console.log(element);
     element.addEventListener("click", function () {
-      console.log("click");
+      // console.log("click");
       displayPhotographersByTag.call(this, data.photographers);
     });
   });
 });
-
-function displayPhotographersByTag(photographers) {
-  let tag = this.innerHTML.replace("#", "");
-  let portfolioWrapper = document.querySelector("#gallery-wrapper");
-  portfolioWrapper.innerHTML = generatePortfolioHtml(photographers, tag);
-  document.querySelectorAll(".portfolio__card__img").forEach((element) => {
-    element.addEventListener("click", openModalImg);
-  });
-}
-
-function generatePortfolioHtml(photographers, tag) {
-  const photographerFilters = photographers.filter((photographer) => {
-    console.log(photographer.tags);
-    console.log(tag);
-    return photographer.tags.includes(tag.toLowerCase());
-  });
-  console.log(tag);
-  console.log(photographerFilters);
-  console.log(photographers);
-  return PhotographerCardsFactory(photographerFilters);
-}

@@ -41,14 +41,17 @@ function PhotographerResumeFactory(photographers, medias) {
     />`;
 
   let portfolioHtml = "";
+  let totalLikes = 0;
   medias.forEach((media) => {
     const photographerIdMedia = media.photographerId;
     const parsedMedia = parseInt(photographerIdMedia, 10);
     if (parsed == parsedMedia) {
       mediaPhotographer[media.id] = media;
       portfolioHtml += MediaFactory(media, found);
+      totalLikes += media.likes;
     }
   });
+  document.querySelector(".daily-rate p span").innerHTML = totalLikes;
   return {
     portfolioHtml,
     photographerHtml,
