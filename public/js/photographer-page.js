@@ -8,6 +8,7 @@ if (!photographerId) {
   window.location = "/public";
 }
 let mediaPhotographer = [];
+let currentPhotographer;
 
 document.addEventListener(onFetchData.name, (e) => {
   const { data } = e;
@@ -40,3 +41,13 @@ document.addEventListener(onFetchData.name, (e) => {
 });
 
 document.querySelector("#modal-btn").addEventListener("click", validateForm);
+
+//  // Utilisation du currentPhotographer pour le nom dans la modal 1
+//  photographerNameModal1 = document.querySelector(
+//   ".modal__wrapper__title span"
+// );
+// photographerNameModal1.textContent = currentPhotographer.name;
+// // Utilisation du currentPhotographer pour le nom dans l'enchoche en bas à droite (daly-rate)
+// photographerDailyRate = document.querySelector(".daily-rate");
+// photographerDailyRate.lastElementChild.textContent =
+//   currentPhotographer.price + "€ / jour";

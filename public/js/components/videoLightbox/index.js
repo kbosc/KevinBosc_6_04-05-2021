@@ -1,9 +1,6 @@
 function videoCard(props) {
-    const {
-        found,
-        media,
-    } = props;
-    return `<div class="portfolio__card">
+  const { found, media } = props;
+  return `<div class="portfolio__card">
         <a href="#" class="portfolio__card__img" data-img-id="${media.id}">
             <video
             src="img/photos/${found.name}/${media.video}"
