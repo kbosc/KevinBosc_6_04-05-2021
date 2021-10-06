@@ -723,6 +723,11 @@ img {
   }
 }
 
+.error--msg--modal {
+  font-size: 1rem;
+  color: #251d1d;
+}
+
 #modal-img {
   overflow: hidden;
   object-position: 0 30%;

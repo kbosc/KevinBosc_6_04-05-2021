@@ -15,6 +15,8 @@
     <script src="js/components/factory/mediaFactory.js" defer></script>
 
     <!-- <script src="js/components/border/index.js" defer></script> -->
+    <script src="js/components/validateModal1/index.js" defer></script>
+    <script src="js/components/PhotographerCounter/index.js" defer></script>
     <script src="js/components/videoLightbox/index.js" defer></script>
     <script src="js/components/imageLightbox/index.js" defer></script>
     <script src="js/photographer-page.js" defer></script>
@@ -136,6 +138,7 @@
                 minlength="2"
                 required
               />
+              <div class="error--msg--modal"></div>
             </div>
             <div class="form__lastname">
               <label for="lastname">Nom</label>
@@ -146,6 +149,7 @@
                 minlength="2"
                 required
               />
+              <div class="error--msg--modal"></div>
             </div>
             <div class="form__email">
               <label for="Email">Email</label>
@@ -156,6 +160,7 @@
                 pattern=".+@globex.com"
                 required
               />
+              <div class="error--msg--modal"></div>
             </div>
             <div class="form__text">
               <label for="text">Votre message</label>
@@ -166,9 +171,10 @@
                 minlength="20"
                 required
               />
+              <div class="error--msg--modal"></div>
             </div>
           </div>
-          <button class="btn out" id="modal-btn">Envoyer</button>
+          <button class="btn" id="modal-btn">Envoyer</button>
         </div>
       </aside>
       <aside id="modal2" class="modal-img">
