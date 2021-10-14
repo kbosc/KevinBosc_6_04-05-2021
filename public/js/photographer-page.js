@@ -1,4 +1,4 @@
-// --------------récupération photographerid in url -----------------
+// --------------récupération photographerid dans l'url -----------------
 const queryString = window.location.search;
 // console.log(queryString);
 const urlParams = new URLSearchParams(queryString);
@@ -34,6 +34,11 @@ document.addEventListener(onFetchData.name, (e) => {
       displayMediasByTag.call(this, data.media);
     });
   });
+  document.querySelectorAll(".select__opt").forEach((element) => {
+    element.addEventListener("change", function () {
+      displayMediasByOption.call(this, data.media);
+    });
+  });
 
   document.querySelectorAll(".count-like span").forEach((e) => {
     e.addEventListener("click", generateCounterLike);
@@ -41,13 +46,3 @@ document.addEventListener(onFetchData.name, (e) => {
 });
 
 document.querySelector("#modal-btn").addEventListener("click", validateForm);
-
-//  // Utilisation du currentPhotographer pour le nom dans la modal 1
-//  photographerNameModal1 = document.querySelector(
-//   ".modal__wrapper__title span"
-// );
-// photographerNameModal1.textContent = currentPhotographer.name;
-// // Utilisation du currentPhotographer pour le nom dans l'enchoche en bas à droite (daly-rate)
-// photographerDailyRate = document.querySelector(".daily-rate");
-// photographerDailyRate.lastElementChild.textContent =
-//   currentPhotographer.price + "€ / jour";

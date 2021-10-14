@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fisheye Artist Page</title>
     <link rel="stylesheet" href="css/style.css" />
-    <!-- <script src="js/main.js" type="module" defer></script> -->
     <script src="js/events.js" defer></script>
     <script src="js/fetchData.js" defer></script>
     <script src="js/components/video/index.js" defer></script>
@@ -14,7 +13,10 @@
     <script src="js/components/image/index.js" defer></script>
     <script src="js/components/factory/mediaFactory.js" defer></script>
 
-    <!-- <script src="js/components/border/index.js" defer></script> -->
+    <script
+      src="js/components/PhotographerMediaByOption/index.js"
+      defer
+    ></script>
     <script src="js/components/validateModal1/index.js" defer></script>
     <script src="js/components/PhotographerCounter/index.js" defer></script>
     <script src="js/components/videoLightbox/index.js" defer></script>
@@ -26,40 +28,18 @@
     ></script>
     <script src="js/components/PhotographerMediaByTag/index.js" defer></script>
     <script src="js/components/modal/index.js" defer></script>
-    <!-- <script src="js/lightbox.js" defer></script> -->
   </head>
   <body>
     <header>
       <a href="index.html"
-        ><img src="img/logo_full.png" alt="Fisheye Home page " class="logo"
+        ><img
+          src="img/logo_full.png"
+          alt="Red logo of Fisheye for go homepage"
+          class="logo"
       /></a>
     </header>
     <main>
-      <section id="photographer-wrapper" class="photographer">
-        <!-- <div class="photographer__section">
-          <div class="photographer__section__about">
-            <h2 class="photographer__section__about__artist">Mimi Keel</h2>
-            <h3 class="photographer__section__about__location">London, UK</h3>
-            <p class="photographer__section__about__text">
-              Voir le beau dans le quotidien
-            </p>
-            <ul id="filter">
-              <li>#Portrait</li>
-              <li>#Events</li>
-              <li>#Travel</li>
-              <li>#Animals</li>
-            </ul>
-          </div>
-          <button class="photographer__section__btn btn" type="button">
-            Contactez-moi
-          </button>
-        </div>
-        <img
-          src="img/photos/Photographers/RhodeDubois.jpg"
-          alt=""
-          id="photographer__img"
-        /> -->
-      </section>
+      <section id="photographer-wrapper" class="photographer"></section>
       <div class="daily-rate">
         <p>
           <span></span>
@@ -68,11 +48,10 @@
             focusable="false"
             data-prefix="fas"
             data-icon="heart"
-            class="svg-heart"
+            class="svg-heart like-black"
             role="img"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 512 512"
-            class="like-black"
             aria-label="like"
           >
             <path
@@ -85,31 +64,23 @@
       </div>
       <section class="portfolio-container">
         <div class="portfolio-container__select">
-          <label for="choose">Trier par</label>
-          <!-- ---------------------TEST---------------- -->
+          <label>Trier par</label>
           <div class="select" tabindex="1">
-            <input
-              class="select__opt"
-              name="test"
-              type="radio"
-              id="opt1"
-              checked
-            />
+            <input class="select__opt" name="test" type="radio" id="opt1" />
             <label for="opt1" class="option">Popularité</label>
             <input class="select__opt" name="test" type="radio" id="opt2" />
             <label for="opt2" class="option">Date</label>
             <input class="select__opt" name="test" type="radio" id="opt3" />
             <label for="opt3" class="option">Titre</label>
           </div>
-          <!-- ---------------------TEST---------------- -->
         </div>
         <div id="portfolio-wrapper" class="portfolio"></div>
       </section>
-      <aside id="modal1" class="modal" aria-hidden="true" role="dialog">
+      <aside id="modal1" class="modal" aria-hidden="true">
         <div class="modal__wrapper">
-          <h1 class="modal__wrapper__title">
+          <div class="modal__wrapper__title">
             Contactez-moi <br />
-            <span>Mimi Keel</span>
+            <span></span>
             <div class="modal__wrapper__close">
               <svg
                 aria-hidden="true"
@@ -127,13 +98,14 @@
                 ></path>
               </svg>
             </div>
-          </h1>
+          </div>
           <div class="form">
             <div class="form__firstname">
               <label for="firstname">Prénom</label>
               <input
                 type="text"
                 name="firstname"
+                id="firstname"
                 class="form__firstname__input"
                 minlength="2"
                 required
@@ -145,6 +117,7 @@
               <input
                 type="text"
                 name="lastname"
+                id="lastname"
                 class="form__lastname__input"
                 minlength="2"
                 required
@@ -152,10 +125,11 @@
               <div class="error--msg--modal"></div>
             </div>
             <div class="form__email">
-              <label for="Email">Email</label>
+              <label for="email">Email</label>
               <input
                 type="text"
                 name="email"
+                id="email"
                 class="form__email__input"
                 pattern=".+@globex.com"
                 required
@@ -167,6 +141,7 @@
               <input
                 type="text"
                 name="text"
+                id="text"
                 class="form__text__input"
                 minlength="20"
                 required
@@ -191,6 +166,7 @@
               chevron-prev
             "
             role="img"
+            aria-label="Previous"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 320 512"
           >
@@ -215,6 +191,7 @@
                 modal-img__wrapper__card__cross
               "
               role="img"
+              aria-label="Close"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 352 512"
             >
@@ -236,6 +213,7 @@
               chevron-next
             "
             role="img"
+            aria-label="Next"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 320 512"
           >

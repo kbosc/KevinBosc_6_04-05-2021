@@ -4,22 +4,35 @@ errorMsgModal1 = document.querySelectorAll(".error--msg--modal");
 
 function validateForm(event) {
   reset();
-  if (
-    validateName(firstNameModal1, regexNameModal1, errorNameModal1()) &&
-    validateName(lastNameModal1, regexNameModal1, errorNameModal1()) &&
-    validateName(emailModal1, regexMailModal1, errorNameModal1()) &&
-    validateName(textModal1, regexTextModal1, errorNameModal1())
-  ) {
-    formModal1.innerHTML = "Votre message à correctement était envoyer";
-    wrapperModal1.removeChild(wrapperModal1.lastElementChild);
-  } else {
+  let errors = [
+    validateName(
+      firstNameModal1,
+      regexNameModal1,
+      errorNameModal1,
+      firstErrorMsg
+    ),
+    validateName(
+      lastNameModal1,
+      regexNameModal1,
+      errorNameModal1,
+      lastErrorMsg
+    ),
+    validateName(emailModal1, regexMailModal1, errorNameModal1, emailErrorMsg),
+    validateName(textModal1, regexTextModal1, errorNameModal1, textErrorMsg),
+  ];
+  if (errors.includes(false)) {
     event.preventDefault();
     return false;
+  } else {
+    formModal1.innerHTML = "Votre message à correctement était envoyer";
+    wrapperModal1.removeChild(wrapperModal1.lastElementChild);
   }
 }
 
 function reset() {
-  errorMsgModal1.textContent = "";
+  errorMsgModal1.forEach((e) => {
+    e.textContent = "";
+  });
   firstNameModal1.style.border = "none";
   lastNameModal1.style.border = "none";
   emailModal1.style.border = "none";
@@ -34,32 +47,24 @@ regexNameModal1 = /^.{2,}$/;
 regexMailModal1 =
   /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 regexTextModal1 = /^.{10,}$/;
+firstErrorMsg = "message d'erreur first";
+lastErrorMsg = "message d'erreur last";
+emailErrorMsg = "message d'erreur email";
+textErrorMsg = "message d'erreur text";
 
-function validateName(name, character, error) {
+function validateName(name, character, error, errormsg) {
   if (character.test(String(name.value).toLowerCase())) {
     return true;
   } else {
     name.style.border = "2px solid red";
-    error;
+    error.call(name, errormsg);
     return false;
   }
 }
 
-function errorNameModal1() {
-  // errorMsgModal1 = this.errorMsgModal1
-  //   errorMsgModal1.textContent =
-  //     "Please enter 2 or more characters for the name field.";
-  // "the fields entered are incorrect.";
+function errorNameModal1(errormsg) {
   let text = "the fields entered are incorrect.";
-  errorMsgModal1.forEach((div) => {
-    if (firstNameModal1.style.border === "2px solid red") {
-      div.textContent = text;
-    } else {
-      div.textContent = "";
-    }
-    return div;
-    // div.textContent = text;
-  });
+  if (this.style.border === "2px solid red") {
+    this.nextElementSibling.textContent = errormsg;
+  }
 }
-
-// photographerNameModal1 = document.querySelector(".modal__wrapper__title span")

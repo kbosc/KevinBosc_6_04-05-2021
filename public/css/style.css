@@ -58,7 +58,7 @@ nav h1 {
 .gallery {
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
+  justify-content: center;
   margin-top: 6rem;
 }
 @media screen and (max-width: 910px) {
@@ -68,6 +68,7 @@ nav h1 {
 }
 
 .gallery__card {
+  width: 20rem;
   margin: 2rem 6rem;
 }
 @media screen and (max-width: 910px) {
@@ -146,6 +147,7 @@ header {
 }
 .photographer__section {
   display: flex;
+  width: 80%;
 }
 @media screen and (max-width: 910px) {
   .photographer__section__btn {
@@ -268,6 +270,7 @@ header {
 }
 @media screen and (max-width: 910px) {
   .portfolio__card {
+    width: 100%;
     margin: 0;
     margin-bottom: 1rem;
   }
@@ -411,6 +414,10 @@ li:hover {
   border-top: #fafafa solid 1.5px;
 }
 
+input:checked + label {
+  color: red;
+}
+
 .option {
   padding: 0 30px 0 10px;
   min-height: 40px;
@@ -463,6 +470,10 @@ li:hover {
 }
 
 img {
+  object-fit: cover;
+}
+
+video {
   object-fit: cover;
 }
 
@@ -523,12 +534,10 @@ img {
   z-index: 2;
 }
 .modal__wrapper {
-  top: 10%;
   left: 30%;
   position: relative;
   background-color: #db8876;
-  width: 669px;
-  height: 900px;
+  width: 40%;
   overflow: auto;
   animation-name: modalopen;
   animation-duration: 0.8s;
@@ -706,6 +715,7 @@ img {
   height: 100%;
 }
 .modal-img__wrapper__card__title {
+  text-align: center;
   font-size: 20px;
   font-weight: 400;
   margin-top: 0.5rem;
@@ -733,9 +743,19 @@ img {
   object-position: 0 30%;
 }
 
+#lightbox {
+  flex: 80;
+  overflow: hidden;
+}
 #lightbox img {
   height: 100%;
   width: 100%;
+  object-fit: contain;
+}
+#lightbox video {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
 }
 
 .lightbox {

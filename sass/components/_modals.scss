@@ -9,15 +9,12 @@
   @extend %flex-center;
   z-index: 2;
   &__wrapper {
-    top: 10%;
     left: 30%;
-    // top: 50%;
-    // left: 50%;
-    // transform: translate(-50%, -50%);
     position: relative;
     background-color: $tertiary-color;
-    width: 669px;
-    height: 900px;
+    width: 40%;
+    // width: 669px;
+    // height: 900px;
     overflow: auto;
     animation-name: modalopen;
     animation-duration: 0.8s;
@@ -188,6 +185,7 @@
         // height: 80%;
       }
       &__title {
+        text-align: center;
         @include font-family(20);
         margin-top: 0.5rem;
         @include responsive-medium {

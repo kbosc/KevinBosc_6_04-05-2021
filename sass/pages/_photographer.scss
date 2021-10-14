@@ -25,6 +25,7 @@ header {
   }
   &__section {
     display: flex;
+    width: 80%;
     &__btn {
       @include responsive-medium {
         position: fixed;
@@ -135,6 +136,7 @@ header {
     margin-right: 4rem;
     margin-bottom: 2rem;
     @include responsive-medium {
+      width: 100%;
       margin: 0;
       margin-bottom: 1rem;
     }
