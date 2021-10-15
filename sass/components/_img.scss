@@ -41,7 +41,23 @@ video {
   height: 18.35px;
 }
 .like {
-  color: $primary-color;
+  // path {
+  //   fill: $light-grey;
+  //   stroke: $primary-color;
+  //   stroke-width: 1rem;
+  // }
+  // color: $primary-color;
   width: 17.5px;
   height: 18.35px;
+}
+
+.fully-heart {
+  stroke: $light-grey;
+  fill: $primary-color;
+}
+
+.empty-heart {
+  fill: $light-grey;
+  stroke: $primary-color;
+  stroke-width: 1rem;
 }

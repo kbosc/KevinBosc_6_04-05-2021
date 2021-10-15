@@ -522,9 +522,19 @@ video {
 }
 
 .like {
-  color: #901c1c;
   width: 17.5px;
   height: 18.35px;
+}
+
+.fully-heart {
+  stroke: #fafafa;
+  fill: #901c1c;
+}
+
+.empty-heart {
+  fill: #fafafa;
+  stroke: #901c1c;
+  stroke-width: 1rem;
 }
 
 .modal {
