@@ -99,31 +99,22 @@ document
     element.addEventListener("click", closeModalImg);
   });
 
-function keyUpModalImg(e) {
+function keyUpModal(e) {
   if (isVisible(modalImg) && e.code == "ArrowRight") {
-    console.log("Next");
     nextModal(e);
   }
   if (isVisible(modalImg) && e.code == "ArrowLeft") {
-    console.log("prev");
     prevModal(e);
   }
   if (isVisible(modalImg) && e.code == "Escape") {
-    console.log("Escape");
     closeModalImg(e);
+  }
+  if (isVisible(modal) && e.code == "Escape") {
+    closeModal(e);
   }
 }
 function isVisible(el) {
   return window.getComputedStyle(el).display != "none";
 }
-// }
 
-document.addEventListener("keydown", keyUpModalImg);
-
-// function logKey(e) {
-//   log = e.code;
-//   // console.log(log);
-//   // ArrowRight
-//   // ArrowLeft
-//   // Escape
-// }
+document.addEventListener("keydown", keyUpModal);

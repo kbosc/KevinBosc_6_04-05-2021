@@ -164,7 +164,9 @@
     @extend %radius;
     @include responsive-medium {
       align-items: center;
-      height: 40%;
+      height: 90%;
+      width: 100%;
+      // height: 40%;
       // position: static;
       // transform: translate(0, 0);
       // width: 100%;
@@ -173,6 +175,9 @@
     &__chevron {
       width: 4rem;
       cursor: pointer;
+      @include responsive-medium {
+        width: 1rem;
+      }
     }
     &__card {
       position: relative;
@@ -181,6 +186,7 @@
       width: 80%;
       height: 100%;
       @include responsive-medium {
+        width: 83%;
         // width: 90%;
         // height: 80%;
       }
@@ -189,6 +195,9 @@
         @include font-family(20);
         margin-top: 0.5rem;
         @include responsive-medium {
+          background-color: $primary-color;
+          color: $light-grey;
+          border-radius: 5px;
           // display: none;
         }
       }

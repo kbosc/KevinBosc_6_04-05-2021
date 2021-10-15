@@ -1,15 +1,14 @@
 #lightbox {
   flex: 80;
   overflow: hidden;
-  img {
-    height: 100%;
-    width: 100%;
-    object-fit: contain;
-  }
+  & img,
   video {
     height: 100%;
     width: 100%;
     object-fit: contain;
+    @include responsive-medium {
+      object-fit: cover;
+    }
   }
 }
 
@@ -22,7 +21,6 @@
   background-color: rgb(0, 0, 0, 0.9);
   z-index: 10;
   animation: lightboxIn 0.5s;
-  //   overflow: auto;
   &__next,
   &__prev {
     border: none;
