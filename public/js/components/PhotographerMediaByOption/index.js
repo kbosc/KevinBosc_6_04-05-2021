@@ -4,7 +4,7 @@ function displayMediasByOption(medias) {
   document.querySelectorAll(".portfolio__card__img").forEach((element) => {
     element.addEventListener("click", openModalImg);
   });
-  document.querySelectorAll(".count-like span").forEach((e) => {
+  document.querySelectorAll(".count-like").forEach((e) => {
     e.addEventListener("click", generateCounterLike);
   });
 }

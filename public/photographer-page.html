@@ -21,13 +21,13 @@
     <script src="js/components/PhotographerCounter/index.js" defer></script>
     <script src="js/components/videoLightbox/index.js" defer></script>
     <script src="js/components/imageLightbox/index.js" defer></script>
+    <script src="js/components/modal/index.js" defer></script>
     <script src="js/photographer-page.js" defer></script>
     <script
       src="js/components/photographerMediaGenerateByTag/index.js"
       defer
     ></script>
     <script src="js/components/PhotographerMediaByTag/index.js" defer></script>
-    <script src="js/components/modal/index.js" defer></script>
   </head>
   <body>
     <header>
@@ -66,7 +66,13 @@
         <div class="portfolio-container__select">
           <label>Trier par</label>
           <div class="select" tabindex="1">
-            <input class="select__opt" name="test" type="radio" id="opt1" />
+            <input
+              class="select__opt"
+              name="test"
+              type="radio"
+              id="opt1"
+              checked
+            />
             <label for="opt1" class="option">Popularité</label>
             <input class="select__opt" name="test" type="radio" id="opt2" />
             <label for="opt2" class="option">Date</label>

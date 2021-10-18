@@ -47,10 +47,10 @@ regexNameModal1 = /^.{2,}$/;
 regexMailModal1 =
   /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 regexTextModal1 = /^.{10,}$/;
-firstErrorMsg = "message d'erreur first";
-lastErrorMsg = "message d'erreur last";
-emailErrorMsg = "message d'erreur email";
-textErrorMsg = "message d'erreur text";
+firstErrorMsg = "Le champ doit contenir aux moins 2 caractères";
+lastErrorMsg = "Le champ doit contenir aux moins 2 caractères";
+emailErrorMsg = "L'email est invalide";
+textErrorMsg = "Le champ doit contenir aux moins 10 caractères";
 
 function validateName(name, character, error, errormsg) {
   if (character.test(String(name.value).toLowerCase())) {

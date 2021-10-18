@@ -101,9 +101,9 @@ li {
     opacity: 0;
     position: absolute;
     left: -99999px;
-    &:focus {
-      background: lighten($primary-color, 10%);
-    }
+    // &:focus {
+    //   background: lighten($primary-color, 10%);
+    // }
   }
   &:hover {
     cursor: pointer;
@@ -147,7 +147,7 @@ li {
   pointer-events: none;
   order: 2;
   z-index: 1;
-  transition: background 0.4s ease-in-out;
+  transition: background-color 0.4s ease-in-out;
   box-sizing: border-box;
   overflow: hidden;
   white-space: nowrap;
