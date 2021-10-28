@@ -4,7 +4,7 @@ function videoCard(props) {
         <a href="#" class="portfolio__card__img" data-img-id="${media.id}">
             <video
             src="img/photos/${found.name}/${media.video}"
-            alt=""
+            alt="${media.alt}"
             class="portfolio-card-img"
             /video>
         </a>

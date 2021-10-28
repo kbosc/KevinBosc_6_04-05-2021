@@ -46,7 +46,7 @@ function PhotographerResumeFactory(photographers, medias) {
     </div>
     <img
       src="img/photos/Photographers/${found.portrait}"
-      alt=""
+      alt="Portrait du photographe ${found.name}"
       id="photographer__img"
     />`;
 

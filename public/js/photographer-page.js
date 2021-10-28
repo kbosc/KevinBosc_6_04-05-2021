@@ -42,11 +42,7 @@ document.addEventListener(onFetchData.name, (e) => {
 
   document.querySelectorAll(".count-like").forEach((e) => {
     e.addEventListener("click", generateCounterLike);
-    // e.addEventListener("click", fullyHeart);
   });
-  // document.querySelectorAll(".count-like span").forEach((e) => {
-  //   e.addEventListener("click", generateCounterLike);
-  // });
 });
 
 document.querySelector("#modal-btn").addEventListener("click", validateForm);

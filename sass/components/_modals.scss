@@ -24,6 +24,7 @@
       position: relative;
       @include font-family(64);
       margin: 1rem 2rem;
+      width: 80%;
       @include responsive-medium {
         margin: 2rem 2rem;
         font-size: 2rem;

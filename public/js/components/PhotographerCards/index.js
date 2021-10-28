@@ -8,7 +8,7 @@ function PhotographerCardsFactory(photographers) {
              }" class="gallery__card__artist">
                <img
                  src="img/photos/Photographers/${photographer.portrait}"
-                 alt=""
+                 alt="Portrait du photographe ${photographer.name}"
                  class="gallery__card__artist__img"
                />
                <h2 class="gallery__card__artist__name">${photographer.name}</h2>

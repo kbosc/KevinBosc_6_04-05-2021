@@ -24,6 +24,10 @@ function validateForm(event) {
     event.preventDefault();
     return false;
   } else {
+    console.log(firstNameModal1.value);
+    console.log(lastNameModal1.value);
+    console.log(emailModal1.value);
+    console.log(textModal1.value);
     formModal1.innerHTML = "Votre message à correctement était envoyer";
     wrapperModal1.removeChild(wrapperModal1.lastElementChild);
   }

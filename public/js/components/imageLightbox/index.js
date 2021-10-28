@@ -6,6 +6,7 @@ function imageCard(props) {
     ${image({
       src: `img/photos/${found.name}/${media.image}`,
       class: "portfolio-card-img",
+      alt: `${media.alt}`,
     })}
     </a>
     <div class="portfolio__card__about">
