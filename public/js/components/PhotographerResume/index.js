@@ -35,7 +35,7 @@ function PhotographerResumeFactory(photographers, medias) {
         <ul id="filter">
         ${arrayTags
           .map((element) => {
-            return `<li>#${element}</li>`;
+            return `<li tabindex="0">#${element}</li>`;
           })
           .join("")}
         </ul>
